@@ -1,0 +1,862 @@
+Administração de
+Sistemas Windows
+Prof. Fernando Eryck
+
+WINDOWS SERVER 2012
+ Os servidores Windows 2012 são uma evolução natural resultado das
+grandes melhorias existentes no Windows Server 2008 R2 e só está disponível
+na versão 64 bits.
+ Kernel – NT 6.3
+
+- Mehorias da Base do Windows Server 2012:
+Nova Interface de Usuário – O gerenciamento do servidor foi
+redesenhado para facilitar a administração de vários servidores. A instalação
+em modo gráfico é a mesma que pode ser vista no Windows Phone e
+Windows 8. Inicialmente, a Nova Interface de Usuário ficou conhecido como
+Metro, nome abandonado pela Microsoft poucas semanas após o
+lançamento do Windows Server 2012.
+
+WINDOWS SERVER 2012
+- Mehorias da Base do Windows Server 2012 (cont):
+Windows PowerShell – novo shell de linha de comando que oferece mais
+de 2300 command-lets “cmdlets” em comparação com cerca de 200 no
+W2K8 R2 – que permitem executar tarefas comuns do sistema de forma
+automatizada, como p.e: gerenciar serviços, processos, eventos, entre
+outros.
+Gerenciador de tarefas - Permite obter uma visão geral, centralizada e
+rápida do desempenho de todos os servidores virtuais e físicos, identificar
+problemas, etc.
+Novas opções de instalação – O Windows Server 2012 permite escolher
+entre a instalação Server Core e Servidor com GUI com opções de instalação
+sem uma reinstalação completa.
+
+WINDOWS SERVER 2012
+- Mehorias da Base do Windows Server 2012 (cont):
+Assistente de Cluster - Assistente utilizado na criação de cluster
+permitindo a criação de nós dispersados geograficamente sem estarem em
+uma mesma sub-rede e sem a necessidade de criação de VLANs.
+Network Load Balancing (NLB) – Balanceamento de carga de rede,
+oferecendo suporte a múltiplos endereços IP dedicados e suporte ao IPv6.
+Backup do Windows Server – Ferramenta remodelada incorporando uma
+tecnologia de backup bem mais rápida e um mecanismo de restauração de
+dados e sistema operacional mais simplificado.
+Backup Completo do Servidor
+Backup de volumes específicos
+Backup do System State
+
+WINDOWS SERVER 2012
+- Mehorias da Base do Windows Server 2012 (cont):
+Hyper-V – recurso que permite virtualizar servidores em máquinas virtuais
+(VMs) e executá-las em apenas um servidor físico.
+Remoteapp e TS Web Access – Ambos permitem que programas sejam
+acessados remotamente de forma simples e rápida através da publicação de
+uma aplicação no Terminal Services.
+
+Edições - Windows Server 2012
+A família Windows Server 2012 consiste de quatro versões ou edições
+de sistemas operacionais:
+
+Windows Server 2012 Datacenter Edition
+Windows Server 2012 Standard Edition
+Windows Server 2012 Essentials Edition
+Windows Server 2012 Foundation Edition
+
+Edições - Windows Server 2012
+Windows Server 2012 Datacenter Edition
+É ideal para ambientes hibrídos, com armazenamento de arquivos em
+nuvem e que precisam de um servidor muito bem protegido. A versão
+Datacenter tem funcionalidades completas e instâncias virtuais
+ilimitadas.
+Windows Server 2012 Standard Edition
+Tem as mesmas funções da versão Datacenter, porém é limitado a
+apenas duas instâncias virtuais e indicado para ambientes não
+virtualizados ou levemente virtualizados.
+Windows Server 2012 Essentials Edition
+É indicada a ambientes menores de negócios, que tem interface mais
+simples e não dá direito a virtualizações. A licença é feita por servidor
+com até dois processadores, com limite de 25 usuários.
+
+O trabalho deverá ter no mínimo 7 slides.
+
+Edições - Windows Server 2012
+Windows Server 2012 Foundation Edition
+É a mais simples de todas, indicada para pequenas empresas com
+limite de 15 usuários e servidores com um único processador.
+
+Edições - Windows Server 20012
+
+Papel dos Servidores - Windows Server 2012
+Os servidores Windows Server 2012 podem desempenhar diversos
+papéis distintos para atender as necessidades dos usuários de uma
+rede ou determinada empresa.
+Dos diversos papéis ou atividades dos servidores, algumas
+podem ser destacadas:
+Controlador de Domínio
+Servidor de Arquivos e Impressão
+Servidor DNS, WINS e DHCP
+Servidor Web
+Servidor de Banco de Dados
+Servidor de E-mail
+
+Papel dos Servidores - Windows Server 2012
+Dos diversos papéis ou atividades dos servidores, algumas podem
+ser destacadas (cont.):
+Commerce Server
+Internet Security and Accelaration Server
+Terminal Services
+Servidor de Certificados Digitais para o AD
+
+Certificações Microsoft
+Os conceitos básicos de TI.
+
+Administração de Sistemas de Computador
+
+Instalação e configuração do Windows Server
+Administração do Windows Server
+Configuração Avançada dos Serviços do Windows Server
+
+Administração de Data Centers modernos
+
+Instalação - Windows Server 2012
+A Instalação do Windows Server 2012 pode ser realizada através de
+duas abordagens:
+Atualização
+instalação completa + migração automática das
+configurações dos usuários, documentos e aplicações
+Instalação do Zero
+não retém nenhuma configuração existente
+Requisitos de instalação:
+512 MB de memória RAM
+Processador Intel Core 2 Duo 2.2 Ghz
+15 GB de HD
+
+Instalação - Windows Server 2012
+
+Tela Inicial de Instalação do Windows Server 2012
+
+Instalação - Windows Server 2012
+
+Tela Inicial de Instalação do Windows Server 2012 – Chave do Produto
+
+Instalação - Windows Server 2012
+
+Instalação - Windows Server 2012
+
+Instalação - Windows Server 2012
+
+Instalação - Windows Server 2012
+SENHA
+Admin!@#
+
+Configurações Iniciais - Windows Server 2012
+Antes de iniciar as configurações no Windows Server é necessário
+definir alguns parâmetros:
+Configurar endereço IP – Ex: 192.168.25.1
+Configurar Máscara – 255.255.255.0
+Configurar Gateway – 192.168.25.1
+Configurar Nome do Servidor – SRV-CORE-01
+
+Configurações Iniciais - Windows Server 2012
+
+Configurações Iniciais - Windows Server 2012
+
+Configurações Iniciais - Windows Server 2012
+
+Configurações Iniciais - Windows Server 2012
+
+Configurações Iniciais - Windows Server 2012
+Instalando o Server Minimal Interface
+1 – Após a instalação do server core, execute o Powershell e insira o
+comando abaixo para verificar os modos de interface gráfica disponível:
+Get-WindowsFeature *Gui*
+Acesse a unidade D:
+
+Configurações Iniciais - Windows Server 2012
+Instalando o Server Minimal Interface
+2 – Execute o comando abaixo para instalar o modo gráfico “Server
+Minimal Interface”:
+Install-WindowsFeature Server-Gui-Mgmt-Infra –source
+wim:d:\sources\install.wim:4
+
+Configurações Iniciais - Windows Server 2012
+Instalando o Server Minimal Interface
+3 – Após alguns minutos será solicitado o reinicio do servidor e o Server
+Minimal Interface estará instalado :
+
+Configurações Iniciais - Windows Server 2012
+Instalando o Server Minimal Interface
+4 – Execute o comando abaixo para reiniciar o servidor:
+
+Active Directory - Windows Server 2012
+
+ACTIVE DIRECTORY
+
+Active Directory (AD) - Conceitos
+Alguns conceitos:
+Grupo de trabalho (Work Group) – Em um grupo de trabalho em que
+poucos computadores estão conectados em rede e estes não necessitam de
+uma administração centralizada.
+Administração descentralizada
+SAMs individuais
+Redes pequenas
+
+Base de Usuários
+
+Main Office
+
+Base de Usuários
+
+Main Office
+
+Base de Usuários
+
+Main Office
+
+Active Directory (AD) - Conceitos
+Alguns conceitos (cont.):
+Domínio – É um agrupamento lógico de computadores que compartilham
+uma base de segurança e usuários em comum.
+Administração centralizada
+Único banco de dados (Serviço de Diretório)
+Redes médias e grandes
+
+Base de Usuários
+
+Active Directory (AD) - Conceitos
+Alguns conceitos (cont.):
+É um domínio baseado no Active Directory e no Windows Server 2012
+sendo possível ter dois tipos de servidores:
+Controlador de Domínio (DC – Domain Controller)
+Servidores Membro (Member Servers)
+
+Active Directory (AD) - Conceitos
+
+Active
+É o serviço de diretórios do Windows Server 2012.
+Directory
+
+Serviço
+de
+Diretório
+
+É um serviço de rede, o qual identifica todos os recursos
+disponíveis em uma rede, mantendo informações sobre
+estes dispositivos (contas de usuários, grupos, computadores , etc.) em um banco de dados tornando-os disponíveis para usuários e aplicações
+
+Active Directory (AD) - Conceitos
+Domínio
+
+É a unidade central da estrutura lógica do AD.
+
+estacio.br
+
+SYSVOL
+
+Domain
+Controller
+
+Active
+Directory
+Database
+
+Active Directory (AD) - Conceitos
+Diversos domínios relacionados através de relações de
+
+Árvore de
+Domínios confiança, criadas e mantidas automaticamente pelo AD.
+
+estacio.br
+
+rj.estacio.br
+
+sgp.rj.estacio.br
+
+sga.rj.estacio.br
+
+ce.estacio.br
+
+sgp.ce.estacio.br
+
+sga.ce.estacio.br
+
+Active Directory (AD) - Conceitos
+Floresta
+
+É a maior unidade dentro do Active Directory. Consiste em
+um ou mais domínios sendo que estes não compartilham
+um espaço de nome contíguo.
+
+nacionalgas.com.br
+
+esmaltec.com.br
+minalba.com.br
+
+us.contoso.co
+verdesmares.com.br
+m
+
+Indaia.com.br
+
+As árvores em uma floresta compartilham um esquema comum e um catálogo global
+
+Active Directory (AD) - Conceitos
+
+Objetos
+
+Unidades
+Organizacionais
+
+Representam recursos da rede, como usuários, unidade
+organizacional, grupos, computadores, impressoras, etc.
+
+É um objeto recipiente que se utiliza para organizar objetos
+dentro de um domínio.
+
+Active Directory (AD) - Conceitos
+Servidores de
+Catálogo Global
+Armazena uma cópia de
+todos os objetos do AD de
+todos os domínios em uma
+ou mais árvores de
+
+Domain
+Controller
+Catálogo
+Global
+
+Domínio C
+Domínio B
+Domínio A
+
+Domain
+Controller
+
+domínios de uma floresta.
+Somente os atributos mais
+Importantes dos objetos de
+outros domínios são
+armazenados no SCG.
+
+Partição Completa - Domínio A
+Partição Completa
+Domínio X
+
+Partição Parcial - Domínio B
+Partição Parcial – Domínio C
+
+Active Directory (AD) - Conceitos
+
+Schema
+
+Contém a definição (estrutura) para todos os objetos do AD
+
+Instalação AD - Windows Server 2012
+
+INSTALAÇÃO
+DO
+ACTIVE DIRECTORY
+
+Instalação AD - Windows Server 2012
+Instalando O Active Directory em um servidor que será o primeiro DC
+do domínio. No windows 2008 existem três diferentes maneiras de
+instalar o AD:
+Usando a opção de adicionar Funções (Roles), do console
+Gerenciamento do Servidor;
+Executar o comando no powershell: Install-windowsfeature -name
+AD-Domain-Services –IncludeManagementTools
+
+Instalação AD - Windows Server 2012
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Execute no powershell o comando servermanager e, em seguida,
+clique no menu gerenciar.
+3 – Clique na opção - Adicionar Funções e Recursos
+
+Instalação AD - Windows Server 2012
+4 – Ao abrir o assistente de Adição de Funções e Recursos, clique no
+botão Próximo.
+
+Instalação AD - Windows Server 2012
+6 – Na janela seguinte, selecione o tipo de instalação clicando na opção
+Instalação baseada em função ou recurso e, em seguida, clique no
+botão Próximo.
+
+Instalação AD - Windows Server 2012
+7 – Na janela seguinte, selecione o servidor de destino conforme
+informado abaixo e, em seguida, clique no botão Próximo.
+
+Instalação AD - Windows Server 2012
+8 – Marque a opção Serviços de Domínio Active Directory e, em
+seguida, clique no botão Próximo. Na tela seguinte clique apenas em
+próximo.
+
+Instalação AD - Windows Server 2012
+9 – Clique no botão Próximo.
+
+Instalação AD - Windows Server 2012
+10 – Clique no botão Instalar para iniciar o processo de instalação.
+
+Instalação AD - Windows Server 2012
+11 – Clique no botão Instalar para iniciar o processo de instalação.
+
+Instalação AD - Windows Server 2012
+12 – Após o término do processo de instalação, clique no link promover
+este servidor a controlador de domínio.
+
+Instalação AD - Windows Server 2012
+13 – Selecione a opção Adicionar uma nova floresta, informe o nome do
+novo domínio e clique em próximo.
+
+Instalação AD - Windows Server 2012
+14 – Selecione a opções conforme ilustração abaixo e clique em
+próximo.
+
+Instalação AD - Windows Server 2012
+15 – Apenas clique no botão próximo. O serviço DNS será instalado
+juntamente com o AD
+
+Instalação AD - Windows Server 2012
+16 – Após informado pelo sistema o nome de domínio NetBIOS clique
+em próximo.
+
+Instalação AD - Windows Server 2012
+18 – Clique em próximo.
+
+Instalação AD - Windows Server 2012
+20 – Clique em próximo.
+
+Instalação AD - Windows Server 2012
+21 – Clique em Instalar
+
+Instalação AD - Windows Server 2012
+22 – Acesse o sistema com a senha do administrador
+
+Instalação AD - Windows Server 2012
+23 – Acesse a opção Usuários e Computadores do Active Directory AD
+DS no menu ferramentas
+
+Rebaixar o AD - Windows Server 2012
+
+Rebaixar um DC a um
+Member Server
+
+Rebaixar o AD - Windows Server 2012
+1 – Clique no menu Gerenciar / Remover Funções e Recursos
+
+Rebaixar o AD - Windows Server 2012
+2 – O assistente trará informações para remover a função. Clique em
+próximo.
+
+Rebaixar o AD - Windows Server 2012
+3 – Selecione o servidor do qual irá remover funções e recursos. Clique
+em próximo.
+
+Rebaixar o AD - Windows Server 2012
+4 – Desmarque a opção Serviço de Domínio AD e na tela seguinte
+deixa selecionado a opção Remover Ferramentas. Clique em Remover
+Recursos.
+
+Rebaixar o AD - Windows Server 2012
+5 – Clique em Rebaixar este controlador de domínio
+
+Rebaixar o AD - Windows Server 2012
+6 – Selecione a opção Forçar a remoção deste controlador de domínio
+e, em seguida, Clique em próximo.
+
+Rebaixar o AD - Windows Server 2012
+7 – Selecione a opção Continuar remoção e, em seguida, Clique em
+próximo.
+
+Rebaixar o AD - Windows Server 2012
+8 – Informe a senha do Administrador
+
+Rebaixar o AD - Windows Server 2012
+9 – Clique no botão Rebaixamento. Logo após o Rebaixamento o
+servidor será reiniciado.
+
+Rebaixar o AD - Windows Server 2012
+10 – Verique que não há mais o domínio para realizar o login. Entre com
+a senha do administrador
+
+Rebaixar o AD - Windows Server 2012
+11 – Clique no menu Gerenciar e selecione a opção Remover Funções e
+Recursos e siga os passos novamente para remover o Serviço de
+Domínio de Active Directory para limpar os arquivos de configurações
+restantes.
+
+Atividades - Windows Server 2012
+ATIVIDADE 1 – Instalação AD
+1 – Instale o AD
+2 – Crie um Domínio em uma nova floresta
+3 – Informe o nome do domínio “nomeanomeb.com.br” (Informe
+o nome da dupla)
+4 – Informe um nível de funcionalidade compatível apenas com
+Windows Server 2012
+5 – Instale o serviço de DNS integrado ao AD
+6 – Verifique se a instalação ocorreu com sucesso.
+7 – Verifique se o serviço de DNS foi instalado corretamente.
+
+Atividades - Windows Server 2012
+ATIVIDADE 2 – Criar um DC em um domínio existente
+1 – Siga os procedimentos anteriores para instalação do AD DS
+2 – Na etapa configuração de implantação, selecione Adicionar o
+controlador de domínio a um domínio existente
+3 – Siga as etapas posteriores informando o domínio que se deseja
+ingressar e conta para acesso ao domínio existente.
+4 – Nas opções do controlador de domínio selecione:
+- Servidor de sistema de nomes de domínio (DNS
+- Catálogo Global (GC)
+
+Contas de Usuários no AD - Windows Server
+2012
+
+Criar contas de usuários
+no AD
+
+Active Directory (AD) - Conceitos
+
+Contas de
+usuários de
+Domínios
+
+Contas criadas em um DC são chamadas de “Domain User
+Accounts”. Essas contas permitem que o usuário faça
+logon em qualquer computador do domínio e receba
+Permissões para acessar recursos em qualquer
+computador do domínio.
+
+Contas de
+usuários de
+Servidores
+Membros
+
+Contas criadas em um Servidor Membro são chamadas de
+“Local User Accounts”. Essas contas somente permitem que o
+usuário faça logon e receba permissões para acessar
+recursos do servidor onde a conta foi criada.
+
+Criar um a conta no AD - Windows Server 2012
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador
+Servidor / Ferramentas → Usuários e Computadores do AD
+3 – Será aberto o console de Usuários e Computadores do AD
+
+Criar um a conta no AD - Windows Server 2012
+4 - Clique no sinal de + ao lado do nome do domínio networkX no qual
+você irá criar a conta.
+5 – Abaixo do nome do domínio é exibida uma lista de opções criadas
+automaticamente quando o AD é instalado:
+- Built → Os grupos que ficam nesta opção são grupos locais do
+domínio.
+- Computers → Nesta opção ficam todas as contas de todos
+computadores do domínio.
+- Domain Controllers → Nesta opção ficam as contas de computadores
+dos DCs do domínio.
+- ForeignSecurityPrincipals → Nesta opção ficam objetos relacionados
+a relações de confiannça criadas manualmente pelo administrador.
+- Users: Nesta opção ficam as contas criadas automaticamente pelo AD,
+bem como grupos Globais criados automaticamente e as contas criadas
+manualmente.
+
+Criar um a conta no AD - Windows Server 2012
+6 - Selecione a opção Users.
+7 – Para criar um novo usuário Clique com o botão direito do mouse em
+Users e no menu de opções que é exibido clique em Novo → Usuário.
+8 – Será aberta a janela Novo Objeto – Usuário, na qual você deve
+preencher o nome, sobrenome, nome completo, nome de logon do
+usuário. Preencha os dados da nova conta e clique em avançar.
+9 – Nesta etapa você tem que definir a senha e configurar algumas
+características da conta. Clique em Avançar para seguir para a próxima
+etapa.
+10 – Clique em concluir.
+
+Políticas de Senhas para o Domínio - AD
+
+• Configurar políticas de senha
+
+Política de Senha para o Domínio - AD
+
+Políticas
+de
+Segurança
+
+As políticas de segurança são definidas para o domínio
+como um todo, ou seja, uma vez definidas, elas passam
+a valer em todo o domínio.
+
+Política de Senha para o Domínio - AD
+As políticas de segurança estão divididos em três grupos:
+Diretivas de Senhas
+Diretivas de bloqueio de conta
+Diretivas de Kerberos
+
+Configurar Política de Senha do Domínio - AD
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador
+Servidor → Ferramentas → Gerenciamento de Diretiva de Grupo
+3 – Usando o painel da esquerda, navegue até o domínio NetworkX e
+clique no sinal de + ao lado do respectivo domínio para exibir as
+opções disponíveis.
+4 – Clique com o botão direito do mouse em Default Domain Policy e, no
+menu de opções que é exibido, clique em Editar.
+5 – Será aberto o Editor de Gerenciamento de Diretiva de Grupo.
+6 – Use o painel da esquerda para navegar até a seguinte opção:
+Configurações do Computador → Diretivas → Configurações do
+Windows → Configurações de Segurança → Diretiva de Conta.
+
+Configurar Política de Senha do Domínio - AD
+Diretivas de Senha
+7 – Dentro de diretivas de conta, clique na opção Diretivas de senha.
+Será disponibilizada a lista de diretivas de senha.
+8 – Para alterar uma diretiva dê um duplo clique na respectiva diretiva.
+Ex. Na diretiva Tempo de vida máximo da senha, o valor padrão é 42
+dias. Ao dar um duplo clique, será aberta uma janela onde são exibidas
+as configurações atuais da diretiva podendo estas serem alteradas.
+Após ter definido as configurações desejadas, é só clicar em Ok. Para
+desabilitar a diretiva, fazendo com que ela deixe de ser aplicada é só
+desmarcar a opção.
+
+Configurar Política de Senha do Domínio - AD
+Diretivas de Bloqueio
+9 – Dentro de diretivas de conta, clique na opção Diretivas de Bloqueio.
+Será disponibilizada a lista de diretivas de bloqueio.
+8 – Para alterar uma diretiva dê um duplo clique na respectiva diretiva.
+Ex. Na diretiva Duração do bloqueio de conta: esta diretiva define o
+tempo, em minutos, que a conta permanecerá bloqueada, uma vez que
+tenha sido bloqueada por sucessivas tentativas de logon sem sucesso.
+
+Operações com Contas de Usuários - AD
+
+• Renomear conta
+
+• Bloquear/Desbloquear conta
+• Desativar conta
+• Excluir conta
+
+Renomear contas de usuários - AD
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador de
+Servidor → Ferramentas → Usuários e Computadores do Active
+Directory
+3 – Clique na opção Users ou acesse a unidade organizacional onde
+está a conta a ser renomeada.
+4 – Clique duas vezes na conta a ser renomeada.
+5 – Dê um clique na guia Conta
+6 – No campo nome de logon do usuário digite o novo nome de logon
+para a conta.
+7 – Clique em Ok para salvar as alterações.
+
+Excluir contas de usuários - AD
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador de
+Servidor → Ferramentas → Usuários e Computadores do Active
+Directory
+3 – Clique na opção Users ou acesse a unidade organizacional onde
+está a conta a ser excluída.
+4 – Clique com o botão direito do mouse na conta a ser excluída.
+5 – No menu de opções que é exibido, clique em Excluir.
+6 – O Windows Server 2008 exibe uma mensagem pedindo uma
+confirmação. Clique em Sim para confirmar a exclusão.
+
+Desabilitar contas de usuários - AD
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador de
+Servidor → Ferramentas → Usuários e Computadores do Active
+Directory
+3 – Clique na opção Users ou acesse a unidade organizacional onde
+está a conta a ser desabilitada.
+4 – Clique com o botão direito do mouse na conta a ser desabilitada.
+5 – No menu de opções que é exibido, clique em clique em Desabilitar
+Conta. Será exibida uma mensagem informando que a conta foi
+desabilitada. Clique em Ok para fechar a mensagem.
+6 – A conta desabilitada fica marcada com uma setinha para baixo.
+7 – Para habilitar novamente é só clicar com o botão direito do mouse e,
+no menu opções, clique em Habilitar Conta.
+
+Redefinir a senha de uma conta de usuário - AD
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador de
+Servidor → Ferramentas → Usuários e Computadores do Active
+Directory
+3 – Clique na opção Users ou acesse a unidade organizacional onde
+está a conta a ser desabilitada.
+4 – Clique com o botão direito do mouse na conta a ser desabilitada.
+5 – No menu de opções que é exibido, clique em clique em Desabilitar
+Conta. Será exibida uma mensagem informando que a conta foi
+desabilitada. Clique em Ok para fechar a mensagem.
+6 – A conta desabilitada fica marcada com uma setinha para baixo.
+7 – Para habilitar novamente é só clicar com o botão direito do mouse e,
+no menu opções, clique em Habilitar Conta.
+
+Atividades - Windows Server 2012
+ATIVIDADE 3 – Criar contas de usuário e Inserir
+Desktop no Domínio
+1 – Crie 4 contas de usuários com nomes distintos
+2 – Insira o computador windows 7 no domínio
+3 – Faça o logon com um dos usuários criados
+Inserindo o Desktop no Domínio
+1 – Efetue logon como administrador. Clique com o botão direito em
+Meu Computador, e depois clique em propriedades. A janela
+Propriedades do Sistema será exibida.
+2 – Na aba Nome do Computador, clique em alterar. Na janela Alterações
+de Nome de Computador, selecione Domínio e digite o nome do
+domínio na caixa de texto.
+3 – Forneça as credenciais de nome de usuário e senha com permissão
+de administrador.
+4 – Clique em Ok, aparecerá uma mensagem Bem-Vindo ao Domínio.
+Reinicie o computador.
+
+Grupos de Usuários - AD
+
+• Criar Novos Grupos
+• Adicionar Novos Membros a um Grupo
+
+Grupos de Usuários - AD
+
+Grupos
+De
+Usuários
+
+Um grupo de usuários é uma coleção de contas de
+usuários
+
+A principal função dos grupos de usuários é facilitar administração
+e a atribuição de permissões para acesso a recursos, tais como:
+pastas compartilhadas, impressoras de rede e serviços diversos.
+
+Grupos de Usuários - AD
+Algumas dicas ao se trabalhar com Grupos de Usuários:
+Grupos são uma coleção de contas de usuários
+Os membros de um grupo herdam as permissões atribuídas ao
+grupo
+Os usuários podem ser membros de vários grupos
+Grupos podem ser membros de outros grupos
+Contas de computadores podem ser membros de um grupo
+
+Classificação dos Grupos de Usuários - Escopo
+
+Grupos
+Universais
+
+Grupos
+Global
+
+Grupos
+Locais
+
+São grupos que podem ser utilizados em qualquer parte de um domínio
+ou da árvore de domínios e podem conter membros, grupos e usuários de
+quaisquer domínios.
+
+Um grupo Global é “global” quanto aos locais onde ele pode receber
+permissões de acesso (Qualquer domínio). Estes devem ser utilizados
+para o gerenciamento dos objetos que sofrem alterações constantemente,
+tais como contas de usuários e computadores. Alterações são
+replicadas dentro do domínio e não através de toda floresta.
+
+São grupos que podem receber permissões para os recursos do domínio
+onde foram criados.
+
+Criar Novos Grupos - AD
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador de
+Servidor → Ferramentas → Usuários e Computadores do Active
+Directory
+3 – Clique na opção Users ou acesse a unidade organizacional onde
+está a conta a ser excluída.
+4 – Para criar um novo grupo clique com o botão direito do mouse em
+Users e, no menu que é exibido, clicar em Novo → Grupo
+5 – Será aberta a janela Novo Objeto – Grupo. Insira um nome ao Grupo.
+Na parte de baixa de janela defina o escopo do grupo, Domínio Local,
+Global ou Universal. Marque a opção Global e o tipo Segurança.
+
+Criar Novos Grupos - AD
+6 – Clique em OK e o novo grupo será criado e já será exibido na
+listagem de grupos, dentro da opção Users.
+
+Adicionar Novos Membros a um Grupo - AD
+1 – Dê um clique duplo no grupo criado anteriomente para exibir as
+propriedades do grupo.
+2 – Na guia Geral pode ser inserido uma descrição, um email, alterar o
+tipo e o escopo do grupo e inserir comentários sobre o grupo.
+3 – Dê um clique na guia Membros. Para adicionar membros ao grupo
+dê um clique no botão Adicionar.
+4 – Será exibida a janela Selecionar Usuários, Contatos, Computadores
+ou Grupos.
+5 – Digite o nome de logon dos usuários que farão parte do grupo ou
+clique em Avançado para pesquisar os nomes ou grupos de usuários.
+6 – Após ter selecionado os objetos que serão incluídos como membros
+do grupo, clique em OK e a janela de propriedades do grupo será
+exibida. Clique em Ok novamente.
+
+Unidades Organizacionais - AD
+
+• Criar Unidades Organizacionais
+• Mover Contas entre UOs
+
+Unidades Organizacionais - AD
+
+Unidade
+Organizacional
+
+É uma divisão que pode ser utilizada para organizar os objetos de um
+determinado domínio em agrupamentos lógicos (tais como por região,
+cidade, por função ou por outro critério qualquer) para efeitos de
+administração.
+
+Criar Unidades Organizacionais - AD
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador de
+Servidor → Ferramentas → Usuários e Computadores do Active
+Directory
+3 – Para criar uma OU clique com o botão direito do mouse no domínio
+no qual você quer criar a nova OU.
+4 – No menu de opções que é exibido clique em Novo → Unidade
+Organizacional.
+5 – Será exibida a janela Novo Objeto → Unidade Organizacional,
+solicitando que digite o nome da nova OU que será criada.
+6 – Digite o nome da OU e clique em OK.
+
+Mover Contas para as Unidades Organizacionais
+- AD
+1 – Faça o logon com uma conta com permissão de Administrador
+2 – Abra o console Usuários e Computadores do AD: Gerenciador de
+Servidor → Ferramentas → Usuários e Computadores do Active
+Directory
+3 – Clique na opção Users ou na Unidade Organizacional onde está o
+objeto a ser movido.
+4 – Clique com o botão direito do mouse no objeto a ser movido.
+5 – No menu de opções que é exibido clique em Mover.
+6 – Será exibida a janela Mover com a lista de OUs disponíveis.
+Selecione a OU para onde será movido o objeto e clique em OK.
+Obs: Os objetos também podem ser movidos usando os recursos de
+Arrastar e Soltar.
+
+Atividades - Windows Server 2012
+ATIVIDADE 4 – Criar Unidades Organizacionais no AD
+1 – Crie 5 OUs de acordo com os nomes abaixo:
+- Administrativo
+- Financeiro
+- Marketing
+- Juridico
+- Contabilidade
+2 – Para cada OU criada, crie sub unidades organizacionais chamadas
+usuários, computadores e impressoras.
+3 – Também para cada OU criada, dentro da OU usuário crie um grupo
+com o mesmo nome da OU com Escopo Global do tipo Segurança
+4 – Crie três usuários dentro da OU Administrativo com os seguintes
+nomes: Coutinho, Antonio e Gilmar com as senhas 123456. O usuário
+deve alterar a senha no próximo logon.
+5 – Crie três usuários dentro da OU Financeiro com os seguintes
+nomes: Joana, Rosa e Maria com as senhas 123456. O usuário não deve
+alterar a senha no próximo logon.
+
+Atividades - Windows Server 2012
+ATIVIDADE 4 – Criar Unidades Organizacionais no AD
+6 – Crie dois usuários distintos dentro da OU Marketing, Jurídico e
+Contabilidade especificando os nomes de acordo com o seu desejo
+com as senhas 123456. Alguns usuários devem alterar a senha no
+próximo logon e para outros a senha nunca expirará.
+7 – Associe os usuários criados ao seu grupo correspondente.
+
+
